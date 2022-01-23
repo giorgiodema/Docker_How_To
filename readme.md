@@ -41,7 +41,7 @@ $ sudo docker exec [OPTIONS] [CONTAINER_NAME] [COMMAND]
 ```
 In particular to spawn a terminal on an existing container:
 ```
-$sudo docker exec -it  [CONTAINER_NAME] /bin/bash
+$ sudo docker exec -it  [CONTAINER_NAME] /bin/bash
 ```
 
 To save the changes done in a running container, you need the id of the running container (can find it using `sudo docker ps -a`). Then you can save the changes into a 
@@ -62,6 +62,15 @@ $ sudo docker build [PATH]
 ```
 where `[PATH]` is the path of the directory with the dockerfile.
 Some useful options that can be specified inside the dockerfile are:
-- FROM, image of the container
-- VOLUME, creates a mount point in the host filesystem
+- `FROM [IMAGE_NAME]`, specifies the image from which you are building
+- `VOLUME`, creates a mount point in the host filesystem
+
+## Enable Nvidia GPU
+To enable nvidia GPU on a docker container you need to install nvidia-docker,
+follow the instructions here <a>https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html</a>.
+Once nvidia-docker is installed you can run a container with all the GPUs enabled 
+running:
+```
+$ sudo docker run --gpus all [IMAGE_NAME]
+```
 
