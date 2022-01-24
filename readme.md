@@ -6,8 +6,8 @@ To start, stop docker or to see its status:
 $ sudo service docker [start|stop|status]
 ```
 
-## Pull a Docker Image
-To pull a docker image from a registry:
+## Get Docker Images
+To download an image from the <a href="https://hub.docker.com/search?type=image">Docker Hub repository</a>
 ```
 $ sudo docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 ```
