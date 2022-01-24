@@ -31,6 +31,7 @@ $ sudo docker run [OPTIONS] IMAGE_NAME [COMMAND] [ARG]
 where useful options are:
 - `-v host-src:container-dest` to mount host directories in the running container
 - `-it` to run the container interactively
+
 and useful commands are:
 - `bin/bash` to spawn a terminal on the running container
 
@@ -73,4 +74,12 @@ running:
 ```
 $ sudo docker run --gpus all [IMAGE_NAME]
 ```
+
+## Other Useful Commands
+To use docker without root privileges:
+```
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+```
+and then log out and log in again.
 
