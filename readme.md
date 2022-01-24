@@ -64,7 +64,6 @@ $ sudo docker build [PATH]
 where `[PATH]` is the path of the directory with the dockerfile.
 Some useful options that can be specified inside the dockerfile are:
 - `FROM [IMAGE_NAME]`, specifies the image from which you are building
-- `VOLUME`, creates a mount point in the host filesystem
 
 ## Enable Nvidia GPU
 To enable nvidia GPU on a docker container you need to install nvidia-docker,
